@@ -53,7 +53,7 @@ module.exports.validateEditProfileBody = celebrate({
 
 module.exports.validateMovieIdParams = celebrate({
   params: Joi.object().keys({
-    movieId: Joi.number().required(),
+    movieId: Joi.string().required().length(24).hex(),
   }),
 });
 

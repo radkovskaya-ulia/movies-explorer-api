@@ -1,5 +1,4 @@
 module.exports.conflictEmailError = 'Пользователь с таким email уже создан';
-module.exports.conflictMovieIdError = 'Фильм с таким id уже сохранен';
 module.exports.validationError = 'Переданы некорректные данныe';
 module.exports.notFoundMovieError = 'Фильм не найден';
 module.exports.notFoundUserError = 'Пользователь не найден';
