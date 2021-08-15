@@ -24,7 +24,7 @@ mongoose.connect(DB_ADDRESS, {
 });
 
 const whiteList = {
-  origin: 'https://radkovskaya-diploma.nomoredomains.club/',
+  origin: 'https://radkovskaya-diploma.nomoredomains.club',
 };
 
 app.use(requestLogger);
