@@ -1,5 +1,6 @@
 require('dotenv').config();
 const express = require('express');
+const cors = require('cors');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const { errors } = require('celebrate');
@@ -22,9 +23,14 @@ mongoose.connect(DB_ADDRESS, {
   useFindAndModify: false,
 });
 
+const whiteList = {
+  origin: 'https://radkovskaya-diploma.nomoredomains.club/',
+};
+
 app.use(requestLogger);
 app.use(limiter);
 app.use(helmet());
+app.use(cors(whiteList));
 app.use(routes);
 app.use(errorLogger);
 app.use(errors());
