@@ -24,13 +24,13 @@ mongoose.connect(DB_ADDRESS, {
 });
 
 const whiteList = {
-  origin: 'https://radkovskaya-diploma.nomoredomains.club',
+  origin: 'http://localhost:5000',
 };
 
 app.use(requestLogger);
 app.use(limiter);
 app.use(helmet());
-app.use(cors(whiteList));
+app.use(cors());
 app.use(routes);
 app.use(errorLogger);
 app.use(errors());
